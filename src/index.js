@@ -1,4 +1,3 @@
-window.axios = require("axios");
 
 let key = "a4192ff2aa563d8206c8f3fea1478ac5";
 
