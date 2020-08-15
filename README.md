@@ -1,2 +1,2 @@
-# Wiebke_WeaterApp
+# Wiebke_WeatherApp
  
