@@ -1,0 +1,67 @@
+body {
+  text-align: center;
+  background: #8bbcc5;
+}
+
+.menueButton {
+  background: #8bbcc5;
+}
+
+.go {
+  background: #8bbcc5;
+}
+
+.menueButton:hover {
+  color: #4ea0ea;
+  font-size: 20px;
+}
+
+.go:hover {
+  color: #4ea0ea;
+}
+
+h1 {
+  padding: 40px;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 80px;
+  color: #17464e;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+#cel,
+#fahr,
+#dev {
+  font-size: 12px;
+}
+
+.cel:hover,
+.fahr:hover {
+  text-decoration: underline;
+}
+
+.row {
+  padding: 40px;
+}
+
+.card-header {
+  color: #fff;
+  background: #17464e;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.card {
+  background: #8bbcc5;
+  border-color: #4ea0ae;
+}
+
+.list-group-item {
+  background: #8bbcc5;
+}
+
+.menue {
+  text-align: left;
+  color: #17464e;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+		<link rel="stylesheet" href="src/styles.css" />
+		
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Shadows+Into+Light&display=swap" rel="stylesheet">		
+		<script src="https://kit.fontawesome.com/ff7372fd26.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Weather App</title>
+  </head>
+
+  <body>
+		<div class="container">
+
+<div class="menue" >
+ <a  class="menueButton" role="button" id="search">
+	<i class="fas fa-search"></i> 
+ </a>
+ 
+ <a class="menueButton" role="button" id="fav"> 
+	<i class="far fa-star"></i>
+ </a> 
+ <a class="menueButton" role="button" id="settings">
+	<i class="fas fa-cog"></i>
+ </a>
+ <a class="menueButton" role="button" id="location">
+		<i class="fas fa-map-marker-alt"></i>
+ </a>
+ <form id="search-form">
+		<input type="text" class="go" id="search-input">
+		<input type="submit" class="go" value = "Go"  >
+	</form>
+
+</div>
+
+		<h1><span id="Default-City">Berlin</span>, DE </h1>
+<h2> Today, today, today </h2>
+	
+				<h3> <span id="todayWeather"> Rainy </span> <span id="temperatureTodayMin"> 10 </span> <span id=unitMin> °C </span> / <span id="temperatureTodayMax"> 15 </span> <span id=unitMax> °C </span> 
+				
+					<a id="cel" role="button" >
+					°C
+					</a> 
+					<a id="dev"> / </a>
+					<a id="fahr" role="button"> 
+						°F
+					</a> 
+				</h3>
+				
+
+				<img  src="src/images/rain.svg" id="images-current" height=250px>  
+			</div> 
+
+		
+
+				<p> 
+					<strong> Sunrise: </strong> <span id="sunrise"> 06:05 am </span> <strong> Sunset: </strong> <span id="sunset" > 08:47 pm </span>
+					<br />
+				 <strong> Humidity: </strong> <span id="humidity"> 100% </span> 		  
+				</p>
+
+				<img src="src/images/Temp_verlauf.png" height=200px>
+
+		</div>
+
+
+		<div class="row align-middle">
+
+		
+		<div class="card col" style="width: 20rem;">
+			<div class="card-header"> Tomorrow </div>
+			<div class="card-body">
+				<h5 class="card-title"><i class="fas fa-cloud-sun-rain"></i> 12°C/ 14°C </h5>
+				<ul class="list-group list-group-flush">
+						<li class="list-group-item"><strong> Sunrise: </strong> 06:15 am</li>
+						<li class="list-group-item"><strong> Sunset: </strong> 09:12 pm</li>
+						<li class="list-group-item"><strong> Chance of Rain: </strong> 27% </li>
+			</div>
+		</div>
+
+		<div class="card col" style="width: 10rem;">
+				<div class="card-header"> Sunday </div>
+			<div class="card-body">
+				<h5 class="card-title"><i class="fas fa-wind"></i> 10°C/ 18°C </h5>
+				<ul class="list-group list-group-flush">
+						<li class="list-group-item"><strong> Sunrise: </strong> 06:17 am</li>
+						<li class="list-group-item"><strong> Sunset: </strong> 09:20 pm</li>
+						<li class="list-group-item"><strong> Change of Rain: </strong> 12% </li>
+								</div>
+		</div>
+
+		<div class="card col" style="width: 10rem;">
+				<div class="card-header"> Monday </div>
+			<div class="card-body">
+				<h5 class="card-title"> <i class="fas fa-cloud"></i> 14°C/20°C </h5>
+				<ul class="list-group list-group-flush">
+						<li class="list-group-item"><strong> Sunrise: </strong> 06:05 am</li>
+						<li class="list-group-item"><strong> Sunset: </strong> 08:47 pm</li>
+						<li class="list-group-item"><strong> Chance of Rain: </strong> 0% </li>
+						</div>
+		</div>
+
+	<div class="card col" style="width: 10rem;">
+			<div class="card-header"> Tuesday  </div>
+			<div class="card-body">
+				<h5 class="card-title"> <i class="far fa-sun"></i> 12°C/ 17°C</h5>
+				<ul class="list-group list-group-flush">
+						<li class="list-group-item"><strong> Sunrise: </strong> 06:05 am</li>
+						<li class="list-group-item"><strong> Sunset: </strong> 08:47 pm</li>
+						<li class="list-group-item"><strong> Chance of Rain: </strong> 20% </li>		
+			</div>
+		</div>
+	</div>
+<p>
+	coded by Wiebke Ketelsen 
+	<br /> Open Source
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="src/index.js"></script>	
+</div>
+  </body>
+</html>
