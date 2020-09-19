@@ -5,6 +5,11 @@ function timeConverter(unixTimestamp) {
   var a = new Date(unixTimestamp * 1000);
   var hour = a.getHours();
   var min = a.getMinutes();
+  var day = a.getDay();
+
+  if (min<10){
+    min="0"+min;
+  }
   var time = hour + ":" + min;
   return time;
 }
@@ -46,12 +51,24 @@ function setDate() {
     "Sunday"
   ];
   let day = days[now.getDay()];
+  let dayTwo = days[now.getDay()+2]; 
+  let dayThree = days[now.getDay+3]; 
+  let dayFour =days[now.getDay+4];
 
   let hour = now.getHours();
   let minute = now.getMinutes();
 
   let today = document.querySelector("h2");
   today.innerHTML = `${day}, ${hour}:${minute}`;
+
+  let twoDay = document.querySelector("#twoday");
+  twoDay.innerHTML = dayTwo;
+
+  let twoDay = document.querySelector("#threeday");
+  twoDay.innerHTML = dayThree;
+
+  let twoDay = document.querySelector("#fourday");
+  twoDay.innerHTML = dayFour;
 
   let cityDefault = document.querySelector("#Default-City");
   cityDefault = cityDefault.innerHTML;
