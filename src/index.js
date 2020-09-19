@@ -50,10 +50,12 @@ function setDate() {
     "Saturday",
     "Sunday"
   ];
+
   let day = days[now.getDay()];
   let dayTwo = days[now.getDay()+2]; 
   let dayThree = days[now.getDay+3]; 
   let dayFour =days[now.getDay+4];
+console.log(dayTwo); 
 
   let hour = now.getHours();
   let minute = now.getMinutes();
@@ -62,7 +64,6 @@ function setDate() {
   today.innerHTML = `${day}, ${hour}:${minute}`;
 
   let twoDay = document.querySelector("#twoday");
-  console.log(dayTwo);
   twoDay.innerHTML = dayTwo;
 
   let threeDay = document.querySelector("#threeday");
