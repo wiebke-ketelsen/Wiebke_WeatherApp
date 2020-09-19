@@ -164,7 +164,7 @@ function cToF(event) {
     var cTempMax = document.querySelector("#temperatureTodayMax").innerHTML;
     var cToFahrMax = (cTempMax * 9) / 5 + 32;
     document.querySelector("#temperatureTodayMax").innerHTML =
-      Math.round(cToFahrMax + 100) / 100;
+      Math.round(cToFahrMax * 100) / 100;
 
     console.log(cToFahrMax);
 
