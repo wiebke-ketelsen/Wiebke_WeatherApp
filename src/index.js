@@ -62,6 +62,7 @@ function setDate() {
   today.innerHTML = `${day}, ${hour}:${minute}`;
 
   let twoDay = document.querySelector("#twoday");
+  console.log(dayTwo);
   twoDay.innerHTML = dayTwo;
 
   let threeDay = document.querySelector("#threeday");
