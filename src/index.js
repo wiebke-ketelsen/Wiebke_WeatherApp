@@ -64,11 +64,11 @@ function setDate() {
   let twoDay = document.querySelector("#twoday");
   twoDay.innerHTML = dayTwo;
 
-  let twoDay = document.querySelector("#threeday");
-  twoDay.innerHTML = dayThree;
+  let threeDay = document.querySelector("#threeday");
+  threeDay.innerHTML = dayThree;
 
-  let twoDay = document.querySelector("#fourday");
-  twoDay.innerHTML = dayFour;
+  let fourDay = document.querySelector("#fourday");
+  fourDay.innerHTML = dayFour;
 
   let cityDefault = document.querySelector("#Default-City");
   cityDefault = cityDefault.innerHTML;
