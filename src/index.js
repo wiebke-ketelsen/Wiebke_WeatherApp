@@ -42,6 +42,14 @@ function setDate() {
   let now = new Date();
 
   let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thurday",
+    "Friday",
+    "Saturday",
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
@@ -53,8 +61,8 @@ function setDate() {
 
   let day = days[now.getDay()];
   let dayTwo = days[now.getDay()+2]; 
-  let dayThree = days[now.getDay+3]; 
-  let dayFour =days[now.getDay+4];
+  let dayThree = days[now.getDay()+3]; 
+  let dayFour =days[now.getDay()+4];
 console.log(dayTwo); 
 
   let hour = now.getHours();
@@ -64,7 +72,7 @@ console.log(dayTwo);
   today.innerHTML = `${day}, ${hour}:${minute}`;
 
   let twoDay = document.querySelector("#twoday");
-  twoDay.innerHTML = dayTwo;
+    twoDay.innerHTML = `${dayTwo}`;
 
   let threeDay = document.querySelector("#threeday");
   threeDay.innerHTML = dayThree;
@@ -75,6 +83,7 @@ console.log(dayTwo);
   let cityDefault = document.querySelector("#Default-City");
   cityDefault = cityDefault.innerHTML;
   let urlDefault = `https://api.openweathermap.org/data/2.5/weather?q=${cityDefault}&appid=${key}&units=metric`;
+
   // let urlDefaultForecast;
   // let urlDefaultHour;
   console.log(urlDefault);
@@ -105,6 +114,11 @@ function setTemp(response) {
   sunrise.innerHTML = timeConverter(response.data.sys.sunrise);
   sunset.innerHTML = timeConverter(response.data.sys.sunset);
   humidity.innerHTML = `${response.data.main.humidity}%`;
+}
+
+function setHour(respone) {
+  let imgHour = document.querySelector("#hourImage")
+
 }
 
 // function setForecast() {}
